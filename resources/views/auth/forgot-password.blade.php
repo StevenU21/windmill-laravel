@@ -23,18 +23,25 @@
                         Forgot your password? No problem. Just let us know your email address and we will email you a
                         password reset link that will allow you to choose a new one.
                     </p>
+
                     <label class="block text-sm">
                         <span class="text-gray-700 dark:text-gray-400">Email</span>
-                        <input
+                        <input type="email"
                             class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
-                            placeholder="Jane Doe" type="email" name="email" value="{{ old('email') }}" required
-                            autofocus />
+                            placeholder="Write your email..." name="email" value="{{ old('email') }}" required autofocus />
                     </label>
 
                     <button type="submit"
-                        class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                        class="flex items-center justify-center w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                        <i class="fas fa-envelope mr-2"></i>
                         Email Password Reset Link
                     </button>
+
+                    <a href="{{ route('login') }}"
+                        class="flex items-center justify-center w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-gray-700 transition-colors duration-150 border border-gray-300 rounded-lg dark:text-gray-400 dark:border-gray-600 hover:border-gray-500 focus:outline-none focus:shadow-outline-gray">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Back
+                    </a>
                 </div>
             </form>
         </div>
