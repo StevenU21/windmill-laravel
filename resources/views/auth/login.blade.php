@@ -3,7 +3,7 @@
 
 @section('content')
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <x-session-message class="mb-4" :status="session('status')" />
 
     <div class="flex flex-col overflow-y-auto md:flex-row">
         <div class="h-32 md:h-auto md:w-1/2">
