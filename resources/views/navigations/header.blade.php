@@ -90,7 +90,7 @@
                         aria-label="submenu">
                         <li class="flex">
                             <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                href="#">
+                                href="{{ route('profile.show') }}">
                                 <i class="fas fa-user w-4 h-4 mr-3"></i>
                                 <span>Profile</span>
                             </a>
