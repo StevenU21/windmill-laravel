@@ -35,6 +35,19 @@ Route::get('/tables', function () {
     return view('pages/tables');
 })->name('tables');
 
+Route::get('/categories', function () {
+    return view('categories/index');
+})->name('categories.index');
+
+Route::get('/categories/create', function () {
+    return view('categories/create');
+})->name('categories.create');
+
+Route::get('/categories/show', function () {
+    return view('categories/show');
+})->name('categories.show');
+
+
 Route::middleware('auth')->prefix('/profile')->name('profile.')->group(function () {
     Route::get('/', [ProfileController::class, 'show'])->name('show');
     Route::get('/edit', [ProfileController::class, 'edit'])->name('edit');

@@ -13,7 +13,7 @@
             </a>
         </div>
 
-        <form action="{{ route('categories.store') }}" method="POST">
+        <form action="#" method="POST">
             @csrf
             @include('categories.form')
         </form>

@@ -7,7 +7,7 @@
         </h2>
 
         <!-- Success Messages -->
-        <x-session-messages />
+        <x-session-message />
         <!-- End Success Messages -->
 
         <div class="flex justify-end mb-4">
@@ -42,56 +42,55 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-                        @foreach ($categories as $category)
-                            <tr class="text-gray-700 dark:text-gray-400">
-                                <td class="px-4 py-3 text-xs">
-                                    <span
-                                        class="px-2 py-1 font-semibold leading-tight text-white bg-purple-600 rounded-full dark:bg-purple-700 dark:text-white">
-                                        {{ $category->id }}
-                                    </span>
-                                </td>
-                                <td class="px-4 py-3 text-sm">
-                                    {{ $category->name }}
-                                </td>
-                                <td class="px-4 py-3 text-sm">
-                                    {{ $category->description }}
-                                </td>
-                                <td class="px-4 py-3 text-sm">
-                                    {{ $category->created_at }}
-                                </td>
-                                <td class="px-4 py-3">
-                                    <div class="flex items-center space-x-4 text-sm">
+                        <tr class="text-gray-700 dark:text-gray-400">
+                            <td class="px-4 py-3 text-xs">
+                                <span
+                                    class="px-2 py-1 font-semibold leading-tight text-white bg-purple-600 rounded-full dark:bg-purple-700 dark:text-white">
+                                    1
+                                </span>
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                                Electronics
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                                Electronics category description goes here.
+                            </td>
+                            <td class="px-4 py-3 text-sm">
+                                2023-10-01
+                            </td>
+                            <td class="px-4 py-3">
+                                <div class="flex items-center space-x-4 text-sm">
 
-                                        <a href="{{ route('categories.show', $category->id) }}"
+                                    <a href="{{ route('categories.show') }}"
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                        aria-label="Show">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+
+                                    <a href="#"
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                        aria-label="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+
+                                    <form action="#" method="POST" class="inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
                                             class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                            aria-label="Show">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-
-                                        <a href="{{ route('categories.edit', $category->id) }}"
-                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                            aria-label="Edit">
-                                            <i class="fas fa-edit"></i>
-                                        </a>
-
-                                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST" class="inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit"
-                                                class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                                aria-label="Delete" onclick="return confirm('Are you sure you want to delete this category?')">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
+                                            aria-label="Delete"
+                                            onclick="return confirm('Are you sure you want to delete this category?')">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
             <div>
-                {{ $categories->links() }}
+                <!-- pagination -->
             </div>
         </div>
     </div>

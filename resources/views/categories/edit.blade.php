@@ -13,7 +13,7 @@
             </a>
         </div>
 
-        <form action="{{ route('categories.update', $category) }}" method="POST">
+        <form action="#" method="POST">
             @csrf
             @method('PUT')
             @include('categories.form')
