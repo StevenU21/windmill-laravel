@@ -19,7 +19,7 @@
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                     href="{{ route('forms') }}">
                     <i class="fas fa-edit w-5 h-5"></i>
-                    <span class="ml-4">Forms</span>
+                    <span class="ml-4">Example</span>
                 </a>
             </li>
             <!-- Add more items here -->
