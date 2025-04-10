@@ -74,16 +74,12 @@
                                         <i class="fas fa-edit"></i>
                                     </a>
 
-                                    <form action="#" method="POST" class="inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                                            aria-label="Delete"
-                                            onclick="return confirm('Are you sure you want to delete this category?')">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </form>
+                                    <button type="submit"
+                                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                                        aria-label="Delete">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+
                                 </div>
                             </td>
                         </tr>
