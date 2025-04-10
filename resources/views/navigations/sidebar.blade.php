@@ -22,41 +22,9 @@
                     <span class="ml-4">Forms</span>
                 </a>
             </li>
-            <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="cards.html">
-                    <i class="fas fa-id-card w-5 h-5"></i>
-                    <span class="ml-4">Cards</span>
-                </a>
-            </li>
-            <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="charts.html">
-                    <i class="fas fa-chart-pie w-5 h-5"></i>
-                    <span class="ml-4">Charts</span>
-                </a>
-            </li>
-            <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="buttons.html">
-                    <i class="fas fa-mouse-pointer w-5 h-5"></i>
-                    <span class="ml-4">Buttons</span>
-                </a>
-            </li>
-            <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="modals.html">
-                    <i class="fas fa-window-maximize w-5 h-5"></i>
-                    <span class="ml-4">Modals</span>
-                </a>
-            </li>
-            <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="tables.html">
-                    <i class="fas fa-table w-5 h-5"></i>
-                    <span class="ml-4">Tables</span>
-                </a>
-            </li>
+            <!-- Add more items here -->
+
+            <!-- Dropdown menu -->
             <li class="relative px-6 py-3">
                 <button
                     class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
@@ -76,27 +44,39 @@
                         aria-label="submenu">
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full" href="pages/login.html">Login</a>
-                        </li>
-                        <li
-                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full" href="pages/create-account.html">
-                                Create account
+                            <a class="w-full flex items-center" href="{{ route('forms') }}">
+                                <i class="fas fa-edit w-4 h-4 mr-2"></i> Forms
                             </a>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full" href="pages/forgot-password.html">
-                                Forgot password
+                            <a class="w-full flex items-center" href="{{ route('cards') }}">
+                                <i class="fas fa-id-card w-4 h-4 mr-2"></i> Cards
                             </a>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full" href="pages/404.html">404</a>
+                            <a class="w-full flex items-center" href="{{ route('charts') }}">
+                                <i class="fas fa-chart-bar w-4 h-4 mr-2"></i> Charts
+                            </a>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full" href="pages/blank.html">Blank</a>
+                            <a class="w-full flex items-center" href="{{ route('buttons') }}">
+                                <i class="fas fa-square w-4 h-4 mr-2"></i> Buttons
+                            </a>
+                        </li>
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center" href="{{ route('modals') }}">
+                                <i class="fas fa-window-maximize w-4 h-4 mr-2"></i> Modals
+                            </a>
+                        </li>
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center" href="{{ route('tables') }}">
+                                <i class="fas fa-table w-4 h-4 mr-2"></i> Tables
+                            </a>
                         </li>
                     </ul>
                 </template>
