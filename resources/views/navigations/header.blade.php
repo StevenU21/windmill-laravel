@@ -103,11 +103,14 @@
                             </a>
                         </li>
                         <li class="flex">
-                            <a class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                                href="#">
-                                <i class="fas fa-sign-out-alt w-4 h-4 mr-3"></i>
-                                <span>Log out</span>
-                            </a>
+                            <form method="POST" action="{{ route('logout') }}" class="w-full">
+                                @csrf
+                                <button type="submit"
+                                    class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+                                    <i class="fas fa-sign-out-alt w-4 h-4 mr-3"></i>
+                                    <span>Log out</span>
+                                </button>
+                            </form>
                         </li>
                     </ul>
                 </template>
