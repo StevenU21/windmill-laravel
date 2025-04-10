@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Category Details')
 
 @section('content')
     <div class="container px-6 mx-auto grid">
