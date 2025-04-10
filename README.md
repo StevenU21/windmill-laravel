@@ -1,6 +1,6 @@
 # Windmill-Laravel
 
-¡Bienvenido a **Windmill-Laravel**! Este proyecto es una integración de Laravel 12 con el paquete **Windmill-Dashboard**, diseñado para ofrecer una experiencia de usuario moderna y accesible, junto con un diseño elegante y funcional.
+¡Bienvenido a **Windmill-Laravel**! Este proyecto es una integración de Laravel 12 con el paquete **Windmill-Dashboard**, diseñado para ofrecer una experiencia de usuario moderna y accesible, junto[...]
 
 ## 🚀 Características
 
@@ -17,40 +17,18 @@
   - **Alpine JS**: Utilizado para menús desplegables y conmutadores interactivos.
   - **Tailwind CSS**: Framework CSS moderno para un diseño elegante y receptivo.
   - **Chart.js**: Gráficos interactivos y personalizables.
-  - **Heroicons**: Íconos hermosos y listos para usar.
+  - **FontAwesome**: Íconos hermosos y listos para usar.
 
 ## 🏗️ Instalación
 
-Sigue estos pasos para instalar y configurar el proyecto:
+Este proyecto ya está listo para ser utilizado en un entorno de **producción**. Para instalarlo, sigue estos pasos:
 
-1. Clona el repositorio:
+1. Crea un nuevo proyecto utilizando Composer:
    ```bash
-   git clone https://github.com/StevenU21/windmill-laravel.git
-   cd windmill-laravel
+   composer create-project deifhelt/windmill-laravel nombre-proyecto
    ```
 
-2. Instala las dependencias de Laravel:
-   ```bash
-   composer install
-   ```
-
-3. Instala las dependencias de frontend:
-   ```bash
-   npm install && npm run dev
-   ```
-
-4. Configura el archivo `.env`:
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-
-5. Configura tu base de datos en el archivo `.env` y ejecuta las migraciones:
-   ```bash
-   php artisan migrate
-   ```
-
-6. Inicia el servidor de desarrollo:
+2. Inicia el servidor de desarrollo:
    ```bash
    php artisan serve
    ```
