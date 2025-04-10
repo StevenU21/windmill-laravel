@@ -15,7 +15,8 @@
         </a>
         <ul class="mt-6">
             <li class="relative px-6 py-3">
-                <span class="{{ Route::is('dashboard') ? 'absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }}"
+                <span
+                    class="{{ Route::is('dashboard') ? 'absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }}"
                     aria-hidden="true"></span>
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('dashboard') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}"
                     href="{{ route('dashboard') }}">
@@ -26,7 +27,10 @@
         </ul>
         <ul>
             <li class="relative px-6 py-3">
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('categories.index') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}"
+                <span
+                    class="{{ Route::is('categories.*') ? 'absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }}"
+                    aria-hidden="true"></span>
+                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('categories.*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}"
                     href="{{ route('categories.index') }}">
                     <i class="fas fa-tags w-5 h-5"></i>
                     <span class="ml-4">Categories</span>
@@ -49,33 +53,45 @@
                         x-transition:leave-start="opacity-100 max-h-xl" x-transition:leave-end="opacity-0 max-h-0"
                         class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
                         aria-label="submenu">
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('forms') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('forms') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('forms') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('forms') }}">
                                 <i class="fas fa-edit w-4 h-4 mr-2"></i> Forms
                             </a>
                         </li>
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('cards') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('cards') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('cards') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('cards') }}">
                                 <i class="fas fa-id-card w-4 h-4 mr-2"></i> Cards
                             </a>
                         </li>
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('charts') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('charts') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('charts') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('charts') }}">
                                 <i class="fas fa-chart-bar w-4 h-4 mr-2"></i> Charts
                             </a>
                         </li>
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('buttons') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('buttons') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('buttons') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('buttons') }}">
                                 <i class="fas fa-square w-4 h-4 mr-2"></i> Buttons
                             </a>
                         </li>
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('modals') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('modals') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('modals') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('modals') }}">
                                 <i class="fas fa-window-maximize w-4 h-4 mr-2"></i> Modals
                             </a>
                         </li>
-                        <li class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('tables') ? 'text-gray-800 dark:text-gray-100' : '' }}" href="{{ route('tables') }}">
+                        <li
+                            class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
+                            <a class="w-full flex items-center {{ Route::is('tables') ? 'text-gray-800 dark:text-gray-100' : '' }}"
+                                href="{{ route('tables') }}">
                                 <i class="fas fa-table w-4 h-4 mr-2"></i> Tables
                             </a>
                         </li>
