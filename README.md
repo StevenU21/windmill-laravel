@@ -1,6 +1,6 @@
 # Windmill-Laravel
 
-¡Bienvenido a **Windmill-Laravel**! Este proyecto es una integración de Laravel 12 con el paquete **Windmill-Dashboard**, diseñado para ofrecer una experiencia de usuario moderna y accesible, junto[...]
+¡Bienvenido a **Windmill-Laravel**! Este proyecto es una integración de Laravel 12 con el paquete **Windmill-Dashboard**, diseñado para ofrecer una experiencia de usuario moderna y accesible.
 
 ## 🚀 Características
 
