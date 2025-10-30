@@ -7,8 +7,8 @@
     x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
     x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
-    x-transition:leave-end="opacity-0 transform -translate-x-20" @click.away="closeSideMenu"
-    @keydown.escape="closeSideMenu">
+    x-transition:leave-end="opacity-0 transform -translate-x-20" x-on:click.away="closeSideMenu"
+    x-on:keydown.escape="closeSideMenu">
     <div class="py-4 text-gray-500 dark:text-gray-400">
         <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
             Windmill
@@ -39,7 +39,7 @@
             <li class="relative px-6 py-3">
                 <button
                     class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    @click="togglePagesMenu" aria-haspopup="true">
+                    x-on:click="togglePagesMenu" aria-haspopup="true">
                     <span class="inline-flex items-center">
                         <i class="fas fa-copy w-5 h-5"></i>
                         <span class="ml-4">Pages</span>

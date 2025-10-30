@@ -29,12 +29,12 @@
             <li class="relative px-6 py-3" x-data="{ isOpen: {{ Route::is('forms', 'cards', 'charts', 'buttons', 'modals', 'tables') ? 'true' : 'false' }} }">
                 <button
                     class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 focus:outline-none"
-                    @click="isOpen = !isOpen" aria-haspopup="true">
+                    x-on:click="isOpen = !isOpen" aria-haspopup="true">
                     <span class="inline-flex items-center">
                         <i class="fas fa-copy w-5 h-5"></i>
                         <span class="ml-4">Pages</span>
                     </span>
-                    <i class="fas" :class="{ 'fa-chevron-down': !isOpen, 'fa-chevron-up': isOpen }"></i>
+                    <i class="fas" x-bind:class="{ 'fa-chevron-down': !isOpen, 'fa-chevron-up': isOpen }"></i>
                 </button>
                 <ul x-show="isOpen" x-transition:enter="transition ease-out duration-300"
                     x-transition:enter-start="opacity-0 transform scale-95"
