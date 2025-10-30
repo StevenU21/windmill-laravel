@@ -1,14 +1,14 @@
-<div x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
+<div x-show="$store.menu.isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
     x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
     class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
 <aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
-    x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
+    x-show="$store.menu.isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
     x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
-    x-transition:leave-end="opacity-0 transform -translate-x-20" x-on:click.away="closeSideMenu"
-    x-on:keydown.escape="closeSideMenu">
+    x-transition:leave-end="opacity-0 transform -translate-x-20" x-on:click.away="$store.menu.closeSideMenu()"
+    x-on:keydown.escape="$store.menu.closeSideMenu()">
     <div class="py-4 text-gray-500 dark:text-gray-400">
         <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
             Windmill
@@ -39,14 +39,14 @@
             <li class="relative px-6 py-3">
                 <button
                     class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    x-on:click="togglePagesMenu" aria-haspopup="true">
+                    x-on:click="$store.menu.togglePagesMenu()" aria-haspopup="true">
                     <span class="inline-flex items-center">
                         <i class="fas fa-copy w-5 h-5"></i>
                         <span class="ml-4">Pages</span>
                     </span>
                     <i class="fas fa-chevron-down w-4 h-4"></i>
                 </button>
-                <template x-if="isPagesMenuOpen">
+                <template x-if="$store.menu.isPagesMenuOpen">
                     <ul x-transition:enter="transition-all ease-in-out duration-300"
                         x-transition:enter-start="opacity-25 max-h-0" x-transition:enter-end="opacity-100 max-h-xl"
                         x-transition:leave="transition-all ease-in-out duration-300"

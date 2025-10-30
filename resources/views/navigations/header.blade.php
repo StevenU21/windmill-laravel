@@ -3,7 +3,7 @@
         <!-- Mensajes de prueba eliminados -->
         <!-- Mobile hamburger -->
         <button class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
-            x-on:click="toggleSideMenu" aria-label="Menu">
+            x-on:click="$store.menu.toggleSideMenu()" aria-label="Menu">
             <i class="fas fa-bars w-6 h-6"></i>
         </button>
         <!-- Search input -->
@@ -18,22 +18,12 @@
             </div>
         </div>
         <ul class="flex items-center flex-shrink-0 space-x-6">
-            <!-- Theme toggler (único) -->
-            <li class="flex" x-data="{
-                dark: document.documentElement.classList.contains('dark'),
-                toggleDark() {
-                    this.dark = !this.dark;
-                    document.documentElement.classList.toggle('dark', this.dark);
-                }
-            }">
-                <button @click="toggleDark()" class="rounded-md focus:outline-none focus:shadow-outline-purple"
-                    aria-label="Toggle color mode">
-                    <template x-if="!dark">
-                        <i class="fas fa-sun w-5 h-5"></i>
-                    </template>
-                    <template x-if="dark">
-                        <i class="fas fa-moon w-5 h-5"></i>
-                    </template>
+            <!-- Theme toggler -->
+            <li class="flex">
+                <button class="rounded-md focus:outline-none focus:shadow-outline-purple"
+                    x-on:click="$store.theme.toggle()" aria-label="Toggle color mode">
+                    <i class="fas fa-sun w-5 h-5" x-show="!$store.theme.dark"></i>
+                    <i class="fas fa-moon w-5 h-5" x-show="$store.theme.dark"></i>
                 </button>
             </li>
             <!-- Notifications menu -->
