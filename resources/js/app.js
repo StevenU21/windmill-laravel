@@ -32,3 +32,6 @@ document.addEventListener('alpine:init', () => {
 });
 
 Alpine.start();
+
+// Charts initialization (imported from npm via Vite)
+import './charts';

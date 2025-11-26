@@ -3,18 +3,19 @@
 
 @section('content')
     <div class="container px-6 mx-auto grid">
-        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Create Category
-        </h2>
+        <x-breadcrumb :items="[
+            ['label' => 'Categories', 'icon' => 'fa-tags'],
+            ['label' => 'Index', 'href' => route('categories.index')],
+            ['label' => 'Create'],
+        ]" />
 
-        <div class="mb-4 flex justify-end">
-            <a href="{{ route('categories.index') }}"
-                class="flex items-center px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                <i class="fas fa-arrow-left mr-2"></i> Back
-            </a>
-        </div>
+        <x-page-header title="Categories" subtitle="Gestiona categorías" icon="fa-tags">
+            <x-action-link :href="route('categories.index')" icon="fas fa-arrow-left">
+                Back to Categories
+            </x-action-link>
+        </x-page-header>
 
-        <form action="#" method="POST">
+        <form action="#" method="POST" class="mt-4">
             @csrf
             @include('categories.form')
         </form>

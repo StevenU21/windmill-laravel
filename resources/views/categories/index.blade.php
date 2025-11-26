@@ -3,23 +3,21 @@
 
 @section('content')
     <div class="container grid px-6 mx-auto">
-        <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Categories
-        </h2>
+        <!-- Breadcrumbs -->
+        <x-breadcrumb :parents="[['label' => 'Categories', 'href' => route('categories.index'), 'icon' => 'fa-tags']]" current="Index" />
+
+        <!-- Page header component -->
+        <x-page-header title="Categories" subtitle="Gestiona categorías" icon="fa-tags">
+            <x-action-link :href="route('categories.create')" icon="fas fa-plus">
+                Create Category
+            </x-action-link>
+        </x-page-header>
 
         <!-- Success Messages -->
         <x-session-message />
         <!-- End Success Messages -->
 
-        <div class="flex justify-end mb-4">
-            <a href="{{ route('categories.create') }}"
-                class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
-                <span>Create Category</span>
-                <i class="fas fa-plus ml-2"></i>
-            </a>
-        </div>
-
-        <div class="w-full overflow-hidden rounded-lg shadow-xs">
+        <div class="mt-4 w-full overflow-hidden rounded-lg shadow-xs">
             <div class="w-full overflow-x-auto">
                 <table class="w-full whitespace-no-wrap">
                     <thead>
@@ -42,7 +40,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                    <tbody class="bg-gray-50 divide-y dark:divide-gray-700 dark:bg-gray-800">
                         <tr class="text-gray-700 dark:text-gray-400">
                             <td class="px-4 py-3 text-xs">
                                 <span
@@ -68,7 +66,7 @@
                                         <i class="fas fa-eye"></i>
                                     </a>
 
-                                    <a href="#"
+                                    <a href="{{ route('categories.edit') }}"
                                         class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                                         aria-label="Edit">
                                         <i class="fas fa-edit"></i>

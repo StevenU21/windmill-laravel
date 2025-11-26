@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div x-data class="flex h-screen bg-gray-50 dark:bg-gray-900"
+    <div x-data class="flex h-screen bg-gray-100 dark:bg-gray-900"
         x-bind:class="{ 'overflow-hidden': $store.menu.isSideMenuOpen }">
         <!-- Desktop sidebar -->
         @include('navigations.sidebar')

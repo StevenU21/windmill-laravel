@@ -3,7 +3,7 @@
     x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
     class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
-<aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+<aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-gray-50 dark:bg-gray-800 md:hidden"
     x-show="$store.menu.isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
     x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100"
     x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
@@ -18,11 +18,11 @@
                 <span
                     class="{{ Route::is('dashboard') ? 'absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }}"
                     aria-hidden="true"></span>
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('dashboard') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}"
-                    href="{{ route('dashboard') }}">
+                <x-nav-link :href="route('dashboard')"
+                    class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('dashboard') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}">
                     <i class="fas fa-home w-5 h-5"></i>
                     <span class="ml-4">Dashboard</span>
-                </a>
+                </x-nav-link>
             </li>
         </ul>
         <ul>
@@ -30,11 +30,11 @@
                 <span
                     class="{{ Route::is('categories.*') ? 'absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg' : '' }}"
                     aria-hidden="true"></span>
-                <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('categories.*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}"
-                    href="{{ route('categories.index') }}">
+                <x-nav-link :href="route('categories.index')"
+                    class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 {{ Route::is('categories.*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200' }}">
                     <i class="fas fa-tags w-5 h-5"></i>
                     <span class="ml-4">Categories</span>
-                </a>
+                </x-nav-link>
             </li>
             <li class="relative px-6 py-3">
                 <button
@@ -55,45 +55,45 @@
                         aria-label="submenu">
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('forms') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('forms') }}">
+                            <x-nav-link :href="route('forms')"
+                                class="w-full flex items-center {{ Route::is('forms') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-edit w-4 h-4 mr-2"></i> Forms
-                            </a>
+                            </x-nav-link>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('cards') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('cards') }}">
+                            <x-nav-link :href="route('cards')"
+                                class="w-full flex items-center {{ Route::is('cards') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-id-card w-4 h-4 mr-2"></i> Cards
-                            </a>
+                            </x-nav-link>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('charts') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('charts') }}">
+                            <x-nav-link :href="route('charts')"
+                                class="w-full flex items-center {{ Route::is('charts') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-chart-bar w-4 h-4 mr-2"></i> Charts
-                            </a>
+                            </x-nav-link>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('buttons') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('buttons') }}">
+                            <x-nav-link :href="route('buttons')"
+                                class="w-full flex items-center {{ Route::is('buttons') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-square w-4 h-4 mr-2"></i> Buttons
-                            </a>
+                            </x-nav-link>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('modals') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('modals') }}">
+                            <x-nav-link :href="route('modals')"
+                                class="w-full flex items-center {{ Route::is('modals') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-window-maximize w-4 h-4 mr-2"></i> Modals
-                            </a>
+                            </x-nav-link>
                         </li>
                         <li
                             class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200">
-                            <a class="w-full flex items-center {{ Route::is('tables') ? 'text-gray-800 dark:text-gray-100' : '' }}"
-                                href="{{ route('tables') }}">
+                            <x-nav-link :href="route('tables')"
+                                class="w-full flex items-center {{ Route::is('tables') ? 'text-gray-800 dark:text-gray-100' : '' }}">
                                 <i class="fas fa-table w-4 h-4 mr-2"></i> Tables
-                            </a>
+                            </x-nav-link>
                         </li>
                     </ul>
                 </template>

@@ -43,6 +43,10 @@ Route::get('/categories/create', function () {
     return view('categories/create');
 })->name('categories.create');
 
+Route::get('/categories/edit', function () {
+    return view('categories/edit');
+})->name('categories.edit');
+
 Route::get('/categories/show', function () {
     return view('categories/show');
 })->name('categories.show');
